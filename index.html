@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/web.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <!-- left nav -->
+        <div class="left">
+            <img src="/img/HODLINFO.8f78fc06.png" alt="404">
+            <DIv>Powered by fintech</DIv>
+        </div>
+        <!-- mid nav  -->
+        <div class="mid">
+            <nav>
+                <ul>
+                    <button type="button" aria-haspopup="true" aria-expanded="false"
+                        class="header-button dropdown-toggle btn btn-secondary">INR</button>
+                    <button type="button" aria-haspopup="true" aria-expanded="false"
+                        class="header-button dropdown-toggle btn btn-secondary">BTC</button>
+                    <div class="btn-group"><a target="_blank" href="#" type="button" aria-haspopup="true"
+                            aria-expanded="false" class="header-button btn btn-secondary">BUY BTC</a></div>
+                </ul>
+            </nav>
+
+
+            <div class="right">
+                <div
+                    class="d-flex telegram-logo-text header-telegram-button btn align-items-center pointer color-white">
+                    <div class="text-nowrap d-inline-block color-white">Connect Telegram</div>
+
+                </div>
+            </div>
+
+
+    </header>
+
+    <section class="min-h-screen">
+        <div class="section">
+            <span class="line">#</span>
+            <span class="line">name</span>
+            <SPAN class="line">Last</SPAN>
+            <span class="line">Buy / Sale Price</span>
+            <span class="line">Volume</span>
+            <span class="line">base_unit</span>
+        </div>
+        <div id="topticket">
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="flex justify-between items-center">
+                <div class="footer-text ">Copyright © 2019</div>
+                <div class="footer-text">HodlInfo.com</div>
+                <div class="footer-text pointer">
+                    <a href="#" class="footer-text-link">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+        const toptickets = document.getElementById("topticket");
+        fetch("http://localhost:4000/top10")
+            .then((res) => {
+                return res.json()
+            })
+            .then((json) => {
+                const tickets = json.data;
+                tickets.forEach((ticket, i) => {
+                    const Html = ` <div class="section2">
+            <span class="line">${i + 1}</span>
+            <span class="line">${ticket.name}</span>
+            <SPAN class="line">${ticket.last}</SPAN>
+            <span class="line">${ticket.buy} / ${ticket.sell}</span>
+            <span class="line">${ticket.volume}</span>
+            <span class="line">${ticket.base_unit}</span>
+        </div>`
+
+                    toptickets.insertAdjacentHTML("beforeend", Html)
+                });
+            }).catch(err => {
+                console.log("Something went wrong!!", err)
+            })
+    </script>
+</body>
+
+</html>

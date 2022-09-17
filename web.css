@@ -1,0 +1,158 @@
+body {
+    font-family: Oswald, sans-serif;
+    background-color: #191d28;
+}
+
+.left {
+    position: absolute;
+    top: 18px;
+    left: 60px;
+    color: white;
+    display: inline-block;
+}
+
+.left,
+img {
+    width: 300px;
+    margin: 0px 4px;
+    margin-top: 10px;
+}
+
+.left,
+div {
+    text-align: center;
+}
+
+.mid {
+    display: block;
+    margin: 50px auto;
+    width: 33%;
+
+    color: white;
+
+}
+
+.right {
+    position: absolute;
+    margin: 0px auto;
+    color: white;
+    display: inline-block;
+
+
+}
+
+nav {
+    display: inline-block;
+
+}
+
+nav li {
+    display: inline-block;
+    font-size: 25px;
+
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 32px 32px;
+    color: white;
+}
+
+nav li a:hover {
+    color: red;
+}
+
+.btn {
+    font-family: Oswald, sans-serif;
+    margin: 0px 12px;
+    padding: 3px 15px;
+    border-radius: 7px;
+    border-color: gray;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-group,
+.btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+telegram-button {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.header-telegram-button {
+    margin: -7px 300px;
+    padding: 6px 20px;
+    border-radius: 10px;
+    background-color: #3dc6c1;
+    color: #fff !important;
+}
+
+.right img {
+    width: 350%;
+}
+
+.right-img1 {
+    position: absolute;
+    margin: 0px 1200px;
+    margin-top: 0px 10px;
+
+
+    color: white;
+    display: inline-block;
+    width: 25%;
+}
+
+.section {
+    margin-top: 80px;
+
+
+}
+
+.section2 {
+    margin-top: 12px;
+    background-color: #ffffff3e;
+    border: 1px solid black;
+    opacity: 0.5;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.line {
+
+    color: white;
+    width: 14.2%;
+    display: inline-block;
+
+
+}
+
+.theme-dark .footer {
+    border-top: 2px solid #079b56;
+}
+
+.footer {
+    padding: 13px;
+    color: grey;
+
+}
+
+.footer-text,
+.footer-text-link {
+    color: #888686;
+
+}
+
+.footer-text {
+
+    color: grey;
+
+}
